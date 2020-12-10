@@ -1,0 +1,108 @@
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	height:100%;}
+	
+#wrapper{
+	width: 100%; 
+
+}
+header{
+	background-color: #0000FF; 	color: #FFFFFF;
+	padding: 20px 10px;
+}
+
+nav.nav1 {background-color: orange; height:25px; font-family: Verdana, Geneva, sans-serif;}
+
+nav.nav1 ul {list-style: none;  margin: 0px; padding:0px;  width:95%; margin-left:auto; margin-right: auto;}   
+
+nav.nav1 li {float:left;  width:16%; }
+
+nav.nav1 a {color: #ffffff;text-decoration:none;}
+
+input#menu, label {
+    display: none;
+}
+
+
+section{
+	background-color: #99FFFF;
+	overflow: auto; 
+	width: 100%;
+}
+nav.nav2 {
+	width: 23%;
+	float: left;
+	background-color: #99FFFF;
+	height: 100%;
+	padding: 1%;
+}
+article {
+	width: 73%;
+	float: left;
+	background-color: yellow;
+	padding: 1%;
+}
+footer{
+	background-color: #806d59;	color:#FFFF00;
+	padding: 10px;
+}
+
+/* END OF MAIN STYLING */
+/*   */
+/* *************************** Media Query Overide Mobile ***************** */
+/* *************************** Media Query Overide Mobile ***************** */
+    /* overrides css for mobile views up to 599px wide  */
+@media only screen and (max-width: 599px) 
+{
+ 
+/* set red background and full width article and hide secondary navigation */  
+header  {background-color: #ff0000; }  
+
+nav.nav1 {background-color: orange; height:150px;}
+nav.nav1 li {width:98%;}
+nav.nav2 {width:98%;}
+article {width:98%;}
+
+.collapsible-menu {
+    background-color: yellow;
+    padding: 0px 20px;
+	display:block;
+}
+.collapsible-menu label {
+    font-size: 120%;
+    display: block;
+    cursor: pointer;
+    background: url(../graphics/menu.png) no-repeat left center;
+    padding: 10px 0 10px 50px;
+}
+input:checked +label {
+    background-image: url(../graphics/close.png);
+}
+nav.nav1 {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 0 0 50px;
+}
+
+/* Toggle Effect */
+input:checked ~ label {
+    background-image: url(../graphics/close.png);
+}
+input:checked ~ nav.nav1 {
+    max-height: 100%;
+}
+
+
+}   /* END OF MOBILE OVERIDE STYLING */  
+/*  */
+/* *************************** Media Query Overide Tablet ***************** */
+/* *************************** Media Query Overide Tablet ***************** */
+ @media only screen and (min-width:600px) and (max-width:1199px) 
+ {
+           /* overrides css for tablet  views between    and 1199px wide  */
+    header{background-color: #00ff00; }      /*  green background  */
+
+nav.nav1 {background-color: orange; height:50px;}
+  }
+/* END OF TABLET OVERIDE MAIN STYLING */
+
